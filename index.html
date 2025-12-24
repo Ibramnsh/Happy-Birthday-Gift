@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Small Gift For You</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  </head>
+  <body>
+    <div id="canvas-container"></div>
+
+    <canvas id="confetti-canvas"></canvas>
+
+    <div class="lang-switch">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <span>|</span>
+      <button class="lang-btn" data-lang="zh">中文</button>
+    </div>
+
+    <div class="container">
+      <header>
+        <div class="header-gif">
+          <img
+            src="https://media1.tenor.com/m/2roX3uxz_68AAAAC/cat-space.gif"
+            alt="Space Cat"
+          />
+        </div>
+        <h1 data-key="title" class="translatable">A Cosmic Surprise for You</h1>
+        <p data-key="subtitle" class="subtitle translatable">
+          Floating in the digital space for a special friend
+        </p>
+      </header>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-icon">✨</div>
+          <h3 data-key="card1_title" class="translatable">
+            Hey, how are you today?
+          </h3>
+          <button class="card-btn" data-index="0" data-key="card1_btn">
+            Open
+          </button>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">☕</div>
+          <h3 data-key="card2_title" class="translatable">
+            Don't forget to take a break!
+          </h3>
+          <button class="card-btn" data-index="1" data-key="card2_btn">
+            Got it
+          </button>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🌙</div>
+          <h3 data-key="card3_title" class="translatable">
+            You're doing great, seriously.
+          </h3>
+          <button class="card-btn" data-index="2" data-key="card3_btn">
+            Read
+          </button>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🚀</div>
+          <h3 data-key="card4_title" class="translatable">
+            Sending you good vibes
+          </h3>
+          <button class="card-btn" data-index="3" data-key="card4_btn">
+            Click
+          </button>
+        </div>
+      </div>
+
+      <div class="surprise-container">
+        <button class="surprise-btn" id="surpriseBtn">
+          <span data-key="surprise_btn" class="translatable"
+            >Click for a Cosmic Surprise!</span
+          >
+        </button>
+      </div>
+
+      <footer class="simple-footer">
+        <p data-key="footer_text" class="translatable">
+          Thanks for being such a great friend
+        </p>
+      </footer>
+    </div>
+
+    <div class="modal-overlay" id="messageModal">
+      <div class="modal-content">
+        <div class="modal-icon" id="msgIcon">💖</div>
+        <p class="modal-text" id="msgText"></p>
+        <button class="close-btn" data-key="close_btn">Close</button>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="birthdayModal">
+      <div class="modal-content birthday-content">
+        <h2 data-key="bday_title" class="birthday-title translatable">
+          🎉 Happy 19th Birthday! 🎂
+        </h2>
+        <div class="modal-icon bounce">🎊</div>
+        <p data-key="bday_msg" class="birthday-message translatable">
+          Wishing you the most amazing 19th birthday!
+        </p>
+        <button class="close-btn primary-action" data-key="thank_you_btn">
+          Thank You!
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
